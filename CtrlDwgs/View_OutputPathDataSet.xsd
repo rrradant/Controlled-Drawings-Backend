@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="View_OutputPathDataSet" targetNamespace="http://tempuri.org/View_OutputPathDataSet.xsd" xmlns:mstns="http://tempuri.org/View_OutputPathDataSet.xsd" xmlns="http://tempuri.org/View_OutputPathDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CtrlDwgsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CtrlDwgsConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CtrlDwgs.My.MySettings.GlobalReference.Default.CtrlDwgsConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_OutPutPathTableAdapter" GeneratorDataComponentClassName="View_OutPutPathTableAdapter" Name="View_OutPutPath" UserDataComponentName="View_OutPutPathTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CtrlDwgsConnectionString (MySettings)" DbObjectName="CtrlDwgs.dbo.View_OutPutPath" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ClassID, GroupName, GroupPath, CatName, CatPath, SubCatName, SubCatPath
+FROM            View_OutPutPath</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ClassID" DataSetColumn="ClassID" />
+              <Mapping SourceColumn="GroupName" DataSetColumn="GroupName" />
+              <Mapping SourceColumn="GroupPath" DataSetColumn="GroupPath" />
+              <Mapping SourceColumn="CatName" DataSetColumn="CatName" />
+              <Mapping SourceColumn="CatPath" DataSetColumn="CatPath" />
+              <Mapping SourceColumn="SubCatName" DataSetColumn="SubCatName" />
+              <Mapping SourceColumn="SubCatPath" DataSetColumn="SubCatPath" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="View_OutputPathDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="View_OutputPathDataSet" msprop:Generator_UserDSName="View_OutputPathDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_OutPutPath" msprop:Generator_TableClassName="View_OutPutPathDataTable" msprop:Generator_TableVarName="tableView_OutPutPath" msprop:Generator_TablePropName="View_OutPutPath" msprop:Generator_RowDeletingName="View_OutPutPathRowDeleting" msprop:Generator_RowChangingName="View_OutPutPathRowChanging" msprop:Generator_RowEvHandlerName="View_OutPutPathRowChangeEventHandler" msprop:Generator_RowDeletedName="View_OutPutPathRowDeleted" msprop:Generator_UserTableName="View_OutPutPath" msprop:Generator_RowChangedName="View_OutPutPathRowChanged" msprop:Generator_RowEvArgName="View_OutPutPathRowChangeEvent" msprop:Generator_RowClassName="View_OutPutPathRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ClassID" msprop:Generator_ColumnVarNameInTable="columnClassID" msprop:Generator_ColumnPropNameInRow="ClassID" msprop:Generator_ColumnPropNameInTable="ClassIDColumn" msprop:Generator_UserColumnName="ClassID" type="xs:int" />
+              <xs:element name="GroupName" msprop:Generator_ColumnVarNameInTable="columnGroupName" msprop:Generator_ColumnPropNameInRow="GroupName" msprop:Generator_ColumnPropNameInTable="GroupNameColumn" msprop:Generator_UserColumnName="GroupName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GroupPath" msprop:Generator_ColumnVarNameInTable="columnGroupPath" msprop:Generator_ColumnPropNameInRow="GroupPath" msprop:Generator_ColumnPropNameInTable="GroupPathColumn" msprop:Generator_UserColumnName="GroupPath" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CatName" msprop:Generator_ColumnVarNameInTable="columnCatName" msprop:Generator_ColumnPropNameInRow="CatName" msprop:Generator_ColumnPropNameInTable="CatNameColumn" msprop:Generator_UserColumnName="CatName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CatPath" msprop:Generator_ColumnVarNameInTable="columnCatPath" msprop:Generator_ColumnPropNameInRow="CatPath" msprop:Generator_ColumnPropNameInTable="CatPathColumn" msprop:Generator_UserColumnName="CatPath" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubCatName" msprop:Generator_ColumnVarNameInTable="columnSubCatName" msprop:Generator_ColumnPropNameInRow="SubCatName" msprop:Generator_ColumnPropNameInTable="SubCatNameColumn" msprop:Generator_UserColumnName="SubCatName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubCatPath" msprop:Generator_ColumnVarNameInTable="columnSubCatPath" msprop:Generator_ColumnPropNameInRow="SubCatPath" msprop:Generator_ColumnPropNameInTable="SubCatPathColumn" msprop:Generator_UserColumnName="SubCatPath" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

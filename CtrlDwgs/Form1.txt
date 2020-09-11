@@ -1,0 +1,153 @@
+﻿Public Class Form1
+
+    Private Sub DirListBindingNavigatorSaveItem_Click(sender As System.Object, e As System.EventArgs)
+        Me.Validate()
+        Me.DirListBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.DirListDataSet)
+
+    End Sub
+
+    Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DirListDataSet.DirList' table. You can move, or remove it, as needed.
+        Me.DirListTableAdapter.Fill(Me.DirListDataSet.DirList)
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As System.EventArgs) Handles Button1.Click
+        Me.Validate()
+        Me.DirListBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.DirListDataSet)
+    End Sub
+
+    Private Sub RRRTest()
+        Dim RRR_DT As DirListDataSetTableAdapters.DirListTableAdapter
+        Dim newDirListTable As DirListDataSet.DirListDataTable
+        Dim row As DataRow
+        RRR_DT = New DirListDataSetTableAdapters.DirListTableAdapter()
+        newDirListTable = DirListTableAdapter.GetData()
+        'RRR_DT.Insert("Pinky")
+
+        newDirListTable.AddDirListRow(Now.ToString)
+        RRR_DT.Update(newDirListTable)
+
+        For Each row In newDirListTable.Rows
+            MsgBox(row.Item("DirName"))
+        Next
+
+        Me.TableAdapterManager.UpdateAll(Me.DirListDataSet)
+
+
+
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As System.EventArgs) Handles Button2.Click
+        'Call RRRTest()
+        Try
+            Dim drives As String()
+            drives = System.IO.Directory.GetLogicalDrives()
+
+
+            Dim str As String
+            ListBox2.Items.Clear()
+            For Each str In drives
+                ListBox2.Items.Add(str)
+                'System.Console.WriteLine(str)
+            Next str
+            ListBox2.Items.Add("-----")
+
+        Catch exp As System.IO.IOException
+            MsgBox("An I/O error occurs.", MsgBoxStyle.OkOnly, "Title Here")
+            'System.Console.WriteLine("An I/O error occurs.")
+        Catch exp As System.Security.SecurityException
+            MsgBox("The caller does not have the required permission.", MsgBoxStyle.OkOnly, "Title Here")
+            'System.Console.WriteLine("The caller does not have the " + _
+            '                           "required permission.")
+
+        End Try
+        '******************
+
+        Dim dirPath As String = "C:\Users"
+        Dim dirs As List(Of String) = New List(Of String)(Directory.EnumerateDirectories(dirPath))
+        ListBox2.Items.Add(dirPath)
+        For Each folder In dirs
+            ListBox2.Items.Add(folder)
+            'Console.WriteLine("{0}", folder.Substring(folder.LastIndexOf("\") + 1))
+        Next
+        '******************
+        MsgBox("Starting")
+        Dim targetDirectory As String
+        targetDirectory = "C:\Users\"
+        Dim subdirectoryEntries As String() = Directory.GetDirectories(targetDirectory)
+        ' Recurse into subdirectories of this directory. 
+        ListBox2.Items.Clear()
+        Dim subdirectory As String
+        For Each subdirectory In subdirectoryEntries
+            ListBox2.Items.Add(subdirectory)
+        Next subdirectory
+
+    End Sub
+
+    Private Sub FillDirs()
+        Dim DirListTA As DirListDataSetTableAdapters.DirListTableAdapter
+        Dim DirListDataTable As DirListDataSet.DirListDataTable
+        Dim row As DataRow
+        Dim n As Integer
+        Dim ActiveDir, SubDir As String
+        Dim NewList As String()
+        'Dim NewList As New ArrayList
+        Dim SubDirs As String()
+
+        DirListTA = New DirListDataSetTableAdapters.DirListTableAdapter
+
+        DirListDataTable = DirListTableAdapter.GetData
+
+        DirListDataTable.Clear()
+        DirListTA.Update(DirListDataTable)
+
+
+        ReDim NewList(10000)
+        'NewList.Add(
+
+        n = 0
+        NewList(0) = "C:\Users"
+        'For Each row In DirListDataTable.Rows
+
+        For Each x In NewList
+            ActiveDir = x
+            If Not String.IsNullOrEmpty(x) Then
+                Try
+                    SubDirs = Directory.GetDirectories(ActiveDir)
+                    For Each SubDir In SubDirs
+                        If n = NewList.GetUpperBound(0) Then
+                            ReDim Preserve NewList(n + 100)
+                        End If
+                        n = n + 1
+                        NewList(n) = SubDir
+
+                    Next
+                    'Exit For
+                    'MsgBox(row.Item("DirName"))
+                Catch e As UnauthorizedAccessException
+                End Try
+            End If
+        Next
+        'MsgBox(n)
+
+        For Each x In NewList
+            If Not String.IsNullOrEmpty(x) Then
+                ListBox2.Items.Add(x)
+            End If
+        Next
+
+        'DirListDataTable.AddDirListRow(SubDir)
+        'DirListDataTable.AddDirListRow("C:\Users")
+        'DirListTA.Update(DirListDataTable)
+
+        'Me.TableAdapterManager.UpdateAll(Me.DirListDataSet)
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As System.EventArgs) Handles Button3.Click
+        Call FillDirs()
+    End Sub
+End Class
