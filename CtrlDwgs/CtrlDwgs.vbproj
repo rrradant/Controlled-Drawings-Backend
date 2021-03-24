@@ -117,7 +117,7 @@
       <DependentUpon>AllFilesDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="BlockedPathDataSet.Designer.vb">
+    <Compile Include="DataSets\BlockedPathDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BlockedPathDataSet.xsd</DependentUpon>
@@ -128,22 +128,22 @@
     <Compile Include="CommandLineHelpForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CopiedFilesDataSet.Designer.vb">
+    <Compile Include="DataSets\CopiedFilesDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CopiedFilesDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FileExtDataSet.Designer.vb">
+    <Compile Include="DataSets\FileExtDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FileExtDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FileInfoDataSet.Designer.vb">
+    <Compile Include="DataSets\FileInfoDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FileInfoDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FileInfoDataSet.vb">
+    <Compile Include="DataSets\FileInfoDataSet.vb">
       <DependentUpon>FileInfoDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="MainForm.vb">
@@ -170,41 +170,41 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="NotVerifiedFilesDataSet.Designer.vb">
+    <Compile Include="DataSets\NotVerifiedFilesDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NotVerifiedFilesDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PathListDataSet.Designer.vb">
+    <Compile Include="DataSets\PathListDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PathListDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PathListDataSet.vb">
+    <Compile Include="DataSets\PathListDataSet.vb">
       <DependentUpon>PathListDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SeedPathDataSet.Designer.vb">
+    <Compile Include="DataSets\SeedPathDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SeedPathDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Settings.vb" />
-    <Compile Include="SkipPathDataSet.Designer.vb">
+    <Compile Include="DataSets\SkipPathDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SkipPathDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="View_FilePathsDataSet.Designer.vb">
+    <Compile Include="DataSets\View_FilePathsDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>View_FilePathsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="View_OutputPathDataSet.Designer.vb">
+    <Compile Include="DataSets\View_OutputPathDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>View_OutputPathDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="View_OutputPathDataSet.vb">
+    <Compile Include="DataSets\View_OutputPathDataSet.vb">
       <DependentUpon>View_OutputPathDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -237,54 +237,54 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="BlockedPathDataSet.xsc">
+    <None Include="DataSets\BlockedPathDataSet.xsc">
       <DependentUpon>BlockedPathDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BlockedPathDataSet.xsd">
+    <None Include="DataSets\BlockedPathDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>BlockedPathDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BlockedPathDataSet.xss">
+    <None Include="DataSets\BlockedPathDataSet.xss">
       <DependentUpon>BlockedPathDataSet.xsd</DependentUpon>
     </None>
     <None Include="ClassDiagram1.cd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="CopiedFilesDataSet.xsc">
+    <None Include="DataSets\CopiedFilesDataSet.xsc">
       <DependentUpon>CopiedFilesDataSet.xsd</DependentUpon>
     </None>
-    <None Include="CopiedFilesDataSet.xsd">
+    <None Include="DataSets\CopiedFilesDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>CopiedFilesDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="CopiedFilesDataSet.xss">
+    <None Include="DataSets\CopiedFilesDataSet.xss">
       <DependentUpon>CopiedFilesDataSet.xsd</DependentUpon>
     </None>
     <None Include="CtrlDwgs.ini">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="FileExtDataSet.xsc">
+    <None Include="DataSets\FileExtDataSet.xsc">
       <DependentUpon>FileExtDataSet.xsd</DependentUpon>
     </None>
-    <None Include="FileExtDataSet.xsd">
+    <None Include="DataSets\FileExtDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>FileExtDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="FileExtDataSet.xss">
+    <None Include="DataSets\FileExtDataSet.xss">
       <DependentUpon>FileExtDataSet.xsd</DependentUpon>
     </None>
-    <None Include="FileInfoDataSet.xsc">
+    <None Include="DataSets\FileInfoDataSet.xsc">
       <DependentUpon>FileInfoDataSet.xsd</DependentUpon>
     </None>
-    <None Include="FileInfoDataSet.xsd">
+    <None Include="DataSets\FileInfoDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>FileInfoDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="FileInfoDataSet.xss">
+    <None Include="DataSets\FileInfoDataSet.xss">
       <DependentUpon>FileInfoDataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\app.manifest" />
@@ -297,70 +297,70 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="NotVerifiedFilesDataSet.xsc">
+    <None Include="DataSets\NotVerifiedFilesDataSet.xsc">
       <DependentUpon>NotVerifiedFilesDataSet.xsd</DependentUpon>
     </None>
-    <None Include="NotVerifiedFilesDataSet.xsd">
+    <None Include="DataSets\NotVerifiedFilesDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>NotVerifiedFilesDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="NotVerifiedFilesDataSet.xss">
+    <None Include="DataSets\NotVerifiedFilesDataSet.xss">
       <DependentUpon>NotVerifiedFilesDataSet.xsd</DependentUpon>
     </None>
-    <None Include="PathListDataSet.xsc">
+    <None Include="DataSets\PathListDataSet.xsc">
       <DependentUpon>PathListDataSet.xsd</DependentUpon>
     </None>
-    <None Include="PathListDataSet.xsd">
+    <None Include="DataSets\PathListDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>PathListDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="PathListDataSet.xss">
+    <None Include="DataSets\PathListDataSet.xss">
       <DependentUpon>PathListDataSet.xsd</DependentUpon>
     </None>
-    <None Include="SeedPathDataSet.xsc">
+    <None Include="DataSets\SeedPathDataSet.xsc">
       <DependentUpon>SeedPathDataSet.xsd</DependentUpon>
     </None>
-    <None Include="SeedPathDataSet.xsd">
+    <None Include="DataSets\SeedPathDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>SeedPathDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SeedPathDataSet.xss">
+    <None Include="DataSets\SeedPathDataSet.xss">
       <DependentUpon>SeedPathDataSet.xsd</DependentUpon>
     </None>
-    <None Include="SkipPathDataSet.xsc">
+    <None Include="DataSets\SkipPathDataSet.xsc">
       <DependentUpon>SkipPathDataSet.xsd</DependentUpon>
     </None>
-    <None Include="SkipPathDataSet.xsd">
+    <None Include="DataSets\SkipPathDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>SkipPathDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SkipPathDataSet.xss">
+    <None Include="DataSets\SkipPathDataSet.xss">
       <DependentUpon>SkipPathDataSet.xsd</DependentUpon>
     </None>
-    <None Include="View_FilePathsDataSet.xsc">
+    <None Include="DataSets\View_FilePathsDataSet.xsc">
       <DependentUpon>View_FilePathsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="View_FilePathsDataSet.xsd">
+    <None Include="DataSets\View_FilePathsDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>View_FilePathsDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="View_FilePathsDataSet.xss">
+    <None Include="DataSets\View_FilePathsDataSet.xss">
       <DependentUpon>View_FilePathsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="View_OutputPathDataSet.xsc">
+    <None Include="DataSets\View_OutputPathDataSet.xsc">
       <DependentUpon>View_OutputPathDataSet.xsd</DependentUpon>
     </None>
-    <None Include="View_OutputPathDataSet.xsd">
+    <None Include="DataSets\View_OutputPathDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>View_OutputPathDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="View_OutputPathDataSet.xss">
+    <None Include="DataSets\View_OutputPathDataSet.xss">
       <DependentUpon>View_OutputPathDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
