@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CtrlDwgs",
+    "\\CtrlDwgs\\bin",
+    "\\CtrlDwgs\\DataSets"
   ],
-  "SelectedNode": "\\CtrlDwgs.sln",
+  "SelectedNode": "\\CtrlDwgs\\CtrlDwgs.vbproj",
   "PreviewInSolutionExplorer": false
 }

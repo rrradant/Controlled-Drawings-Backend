@@ -111,12 +111,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllFilesDataSet.Designer.vb">
+    <Compile Include="DataSets\AllFilesDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AllFilesDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="AllFilesDataSet.vb">
+    <Compile Include="DataSets\AllFilesDataSet.vb">
       <DependentUpon>AllFilesDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
@@ -136,9 +136,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CopiedFilesDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSets\CopiedFilesDataSet.vb">
+      <DependentUpon>CopiedFilesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSets\FileExtDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>FileExtDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\FileExtDataSet.vb">
       <DependentUpon>FileExtDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSets\FileInfoDataSet.Designer.vb">
@@ -148,6 +154,9 @@
     </Compile>
     <Compile Include="DataSets\FileInfoDataSet.vb">
       <DependentUpon>FileInfoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\SeedPathDataSet.vb">
+      <DependentUpon>SeedPathDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
@@ -227,15 +236,15 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="AllFilesDataSet.xsc">
+    <None Include="DataSets\AllFilesDataSet.xsc">
       <DependentUpon>AllFilesDataSet.xsd</DependentUpon>
     </None>
-    <None Include="AllFilesDataSet.xsd">
+    <None Include="DataSets\AllFilesDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AllFilesDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>AllFilesDataSet.Designer.vb</LastGenOutput>
     </None>
-    <None Include="AllFilesDataSet.xss">
+    <None Include="DataSets\AllFilesDataSet.xss">
       <DependentUpon>AllFilesDataSet.xsd</DependentUpon>
     </None>
     <None Include="App.config">

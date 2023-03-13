@@ -534,7 +534,7 @@ Handler:
         MainForm.ProgressBar1.Minimum = 0
         MainForm.ProgressBar1.Maximum = n
         'This section copies all the directories found and stored in DirList into dbo.PathList
-        'First it setas all InPlay bits to false
+        'First it sets all InPlay bits to false
         'Then, it queries the table sbo.PathList for the entry in DirList
         'If the count is 0, it adds the new row
         'If the count is 1, it sets the InPlay bit to true
@@ -587,7 +587,7 @@ Handler:
         'file extension listed in table FileExt that is active. If no extensions are active, then
         'error returned.
         'Each found file is verified that it is not System, Hidden, Read Only, or Temporary.
-        'The AllFiles table lists only the file name and extensuion, and a reference to the source path via
+        'The AllFiles table lists only the file name and extension, and a reference to the source path via
         'PathListID
         '***
         'On Error GoTo Handler
